@@ -1,0 +1,13 @@
+{
+  "name": "mzqc",
+  "version": "1.0.0",
+  "description": "Rapid Front-end Project Engineering Tool",
+  "scripts": {
+    "gc": "node ./.editorconfig-generator.js"
+  },
+  "bin": {
+    "gc": "./.editorconfig-generator.js"
+  },
+  "author": "muzhongqing",
+  "license": "MIT"
+}
