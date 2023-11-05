@@ -2,6 +2,7 @@
   "name": "mzqc",
   "version": "1.0.4",
   "description": "Rapid Front-end Project Engineering Tool",
+  "keywords": "project building",
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
     "cmt": "node ./cmt.js"
