@@ -1,6 +1,6 @@
 {
   "name": "mzqc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Rapid Front-end Project Engineering Tool",
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
