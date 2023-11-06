@@ -5,7 +5,8 @@
   "keywords": "project building",
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
-    "cmt": "node ./cmt.js"
+    "cmt": "node ./cmt.js",
+    "update": "git add . && git commit -m 'add one artical' && git push origin master"
   },
   "bin": {
     "gc": "./.editorconfig-generator.js"
