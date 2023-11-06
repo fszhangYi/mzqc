@@ -6,7 +6,7 @@
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
     "cmt": "node ./cmt.js",
-    "update": "git add . && git commit -m 'add one artical' && git push origin master",
+    "update": "git add . && git commit --amend --no-edit && git push origin master",
     "release": "npx release-it"
   },
   "bin": {
