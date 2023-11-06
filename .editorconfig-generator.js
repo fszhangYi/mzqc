@@ -10,3 +10,7 @@ fs.writeFileSync('.editorconfig', editorConfig);
 // gitignore
 const gitignore = fs.readFileSync(path.join(__dirname, './template/gitignore'));
 fs.writeFileSync('.gitignore', gitignore);
+
+// release-it
+const release = fs.readFileSync(path.join(__dirname, './template/release-it'));
+fs.writeFileSync('.release-it.json', release);
