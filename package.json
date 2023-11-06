@@ -6,8 +6,9 @@
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
     "cmt": "node ./cmt.js",
-    "update": "git add . && git commit --amend --no-edit && git push origin master",
-    "release": "npx release-it"
+    "update": "git add . && git commit --amend --no-edit && git push origin master -f",
+    "release": "npx release-it",
+    "publish": "nrm use npm && npm publish"
   },
   "bin": {
     "gc": "./.editorconfig-generator.js"
