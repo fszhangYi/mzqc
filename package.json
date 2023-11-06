@@ -6,7 +6,8 @@
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
     "cmt": "node ./cmt.js",
-    "update": "git add . && git commit -m 'add one artical' && git push origin master"
+    "update": "git add . && git commit -m 'add one artical' && git push origin master",
+    "release": "npx release-it"
   },
   "bin": {
     "gc": "./.editorconfig-generator.js"
@@ -14,6 +15,7 @@
   "author": "muzhongqing",
   "license": "MIT",
   "dependencies": {
+    "release-it": "^16.2.1",
     "shelljs": "^0.8.5"
   }
 }
