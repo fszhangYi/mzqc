@@ -14,3 +14,7 @@ fs.writeFileSync('.gitignore', gitignore);
 // release-it
 const release = fs.readFileSync(path.join(__dirname, './template/release-it'));
 fs.writeFileSync('.release-it.json', release);
+
+// prettier
+const prettier = fs.readFileSync(path.join(__dirname, './template/prettier'));
+fs.writeFileSync('..prettierrc', prettier);
