@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const chalk = require('chalk');
 
 // editorconfig
 const editorConfig = fs.readFileSync(path.join(__dirname, './template/editorConfig'));
@@ -26,5 +27,5 @@ fs.writeFileSync('.npmrc', npmrc);
 // mock
 const mock = fs.readFileSync(path.join(__dirname, './template/mock.js'));
 fs.writeFileSync('mock.js', mock);
-console.log('use yarn add mock to install mock dependence');
-console.log('add import "./mock.js" in entry file');
+console.log(chalk.grey('use yarn add mock to install mock dependence'));
+console.log(chalk.grey('add import "./mock.js" in entry file'));
