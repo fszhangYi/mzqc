@@ -22,3 +22,9 @@ fs.writeFileSync('.prettierrc', prettier);
 // npmrc
 const npmrc = fs.readFileSync(path.join(__dirname, './template/npmrc'));
 fs.writeFileSync('.npmrc', npmrc);
+
+// mock
+const mock = fs.readFileSync(path.join(__dirname, './template/mock.js'));
+fs.writeFileSync('mock.js', mock);
+console.log('use yarn add mock to install mock dependence');
+console.log('add import "./mock.js" in entry file');
