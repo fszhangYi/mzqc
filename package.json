@@ -3,6 +3,12 @@
   "version": "1.0.12",
   "description": "Rapid Front-end Project Engineering Tool",
   "keywords": "project building",
+  "license": "MIT",
+  "author": "muzhongqing",
+  "bin": {
+    "gc": "./.editorconfig-generator.js",
+    "sort": "./.sort-package.js"
+  },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
     "cmt": "node ./cmt.js",
@@ -10,11 +16,6 @@
     "release": "npx release-it",
     "publish": "nrm use npm && npm publish"
   },
-  "bin": {
-    "gc": "./.editorconfig-generator.js"
-  },
-  "author": "muzhongqing",
-  "license": "MIT",
   "dependencies": {
     "chalk": "1",
     "release-it": "^16.2.1",
