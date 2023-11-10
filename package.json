@@ -2,7 +2,7 @@
   "name": "mzqc",
   "version": "1.0.13",
   "description": "Rapid Front-end Project Engineering Tool",
-  "keywords": "project building",
+  "keywords": ["project", "building"],
   "license": "MIT",
   "author": "muzhongqing",
   "bin": {
