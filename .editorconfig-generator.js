@@ -19,6 +19,8 @@ fs.writeFileSync('.release-it.json', release);
 // prettier
 const prettier = fs.readFileSync(path.join(__dirname, './template/prettier'));
 fs.writeFileSync('.prettierrc', prettier);
+const prettierIgnore = fs.readFileSync(path.join(__dirname, './template/prettierignore'));
+fs.writeFileSync('.prettierignore', prettierIgnore);
 
 // npmrc
 const npmrc = fs.readFileSync(path.join(__dirname, './template/npmrc'));
