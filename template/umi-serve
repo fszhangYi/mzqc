@@ -1,0 +1,21 @@
+// server.js
+const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
+const serveStatic = require('serve-static');
+const path = require('path');
+
+const app = express();
+
+app.use('/api', createProxyMiddleware({ 
+  target: 'http://81.40.35.215:8004', // 根据上面 proxy.js 配置来
+  changeOrigin: true,
+  pathRewrite: {
+    '^/api': '/api'
+  }
+}));
+
+
+// 检查自己项目的打包输出目录是否为 dist 如不是，要更改为对应的
+app.use('/', serveStatic(path.join(__dirname, 'dist')))
+
+app.listen(3000);
