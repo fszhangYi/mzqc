@@ -43,6 +43,8 @@ let _rst = '';
 const newPackageJson = {};
 
 try {
+    console.log('path.join(process.pwd(), "./package.json"):', path.join(process.pwd(), './package.json'));
+
     const packageJson = require(path.join(process.pwd(), './package.json'));
 
     // 读取 package.json 文件
