@@ -25,7 +25,7 @@ const npmrc = fs.readFileSync(path.join(__dirname, './template/npmrc'));
 fs.writeFileSync('.npmrc', npmrc);
 
 // mock
-const mock = fs.readFileSync(path.join(__dirname, './template/mock.js'));
+const mock = fs.readFileSync(path.join(__dirname, './template/mock'));
 fs.writeFileSync('mock.js', mock);
 console.log(chalk.grey('use yarn add mockjs to install mock dependence'));
 console.log(chalk.grey('add import "./mock.js" in entry file'));

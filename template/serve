@@ -1,0 +1,26 @@
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+    // 设置响应头
+    res.setHeader('Content-Type', 'application/json');
+
+    // 根据请求路径进行判断
+    if (req.url === '/api/user' && req.method === 'GET') {
+        // 返回数据为 "hello"
+        const data = {
+            message: 'hello'
+        };
+
+        // 将数据转换为JSON字符串并发送给客户端
+        res.end(JSON.stringify(data));
+    } else {
+        // 如果请求路径不匹配，返回404 Not Found
+        res.statusCode = 404;
+        res.end();
+    }
+});
+
+// 监听在端口3000
+server.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});

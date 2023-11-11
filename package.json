@@ -13,7 +13,8 @@
     "sort": "./.sort-package.js",
     "rmc": "./.remove-comments.js",
     "adds": "./.add-scripts.js",
-    "ts": "./.add-tsconfig.js"
+    "ts": "./.add-tsconfig.js",
+    "serve": "./.add-serve.js"
   },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
