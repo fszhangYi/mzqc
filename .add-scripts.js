@@ -21,6 +21,6 @@ try {
     _rst = JSON.stringify({ ...packageJson }, null, 2);
     fs.writeFileSync(path.join(process.cwd(), './package.json'), _rst);
 } catch (e) {
-    console.log(chalk.grey('change package.json sort failed'));
+    console.log(chalk.grey('add scripts failed'));
 }
 

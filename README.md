@@ -4,3 +4,7 @@
 `npx mzqc gc`
 ## 对package.json进行排序
 `npx mzqc sort`
+## 增加常见的scripts命令
+`npx mzqc adds`
+## 删除某一个文件中的注释
+`npx mzqc rmc 'path'`
