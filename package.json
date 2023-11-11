@@ -10,7 +10,8 @@
   "author": "muzhongqing",
   "bin": {
     "gc": "./.editorconfig-generator.js",
-    "sort": "./.sort-package.js"
+    "sort": "./.sort-package.js",
+    "rmc": "./.remove-comments.js"
   },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
