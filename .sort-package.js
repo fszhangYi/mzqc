@@ -43,9 +43,8 @@ let _rst = '';
 const newPackageJson = {};
 
 try {
-    console.log('path.join(process.pwd(), "./package.json"):', path.join(process.pwd(), './package.json'));
-
-    const packageJson = require(path.join(process.pwd(), './package.json'));
+    const _packageJson = fs.readFileSync('package.json');
+    const packageJson = JSON.parse(_packageJson);
 
     // 读取 package.json 文件
     console.log('packageJson:', packageJson);
@@ -57,7 +56,7 @@ try {
         }
     })
     _rst = JSON.stringify({ ...newPackageJson, ...packageJson }, null, 2);
-    fs.writeFileSync(path.join(process.pwd(), './package.json'), _rst);
+    fs.writeFileSync('package.json', _rst);
 } catch (e) {
     console.log(chalk.grey('change package.json sort failed'));
 }
