@@ -3,10 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
-const packageJson = require(path.join(__dirname, './package.json'));
 
-// 读取 package.json 文件
-console.log('packageJson:', packageJson);
 const recommendedOrder = [
     "name",
     "version",
@@ -46,6 +43,10 @@ let _rst = '';
 const newPackageJson = {};
 
 try {
+    const packageJson = require(path.join(process.pwd(), './package.json'));
+
+    // 读取 package.json 文件
+    console.log('packageJson:', packageJson);
     const keys = Object.keys(packageJson);
     recommendedOrder.forEach(key => {
         if (keys.includes(key)) {
@@ -53,8 +54,8 @@ try {
             delete packageJson[key];
         }
     })
-    _rst = JSON.stringify({...newPackageJson, ...packageJson}, null, 2);
-    fs.writeFileSync(path.join(__dirname, './package.json'), _rst);
+    _rst = JSON.stringify({ ...newPackageJson, ...packageJson }, null, 2);
+    fs.writeFileSync(path.join(process.pwd(), './package.json'), _rst);
 } catch (e) {
     console.log(chalk.grey('change package.json sort failed'));
 }

@@ -11,7 +11,8 @@
   "bin": {
     "gc": "./.editorconfig-generator.js",
     "sort": "./.sort-package.js",
-    "rmc": "./.remove-comments.js"
+    "rmc": "./.remove-comments.js",
+    "adds": "./.add-scripts"
   },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
