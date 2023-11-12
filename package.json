@@ -12,6 +12,8 @@
     "gce": "./.editorconfig-generator.js",
     "gcg": "./.gitignore-generator.js",
     "gcp": "./.prettier-generator.js",
+    "gcn": "./.npm-generator.js",
+    "gcm": "./.mock-generator.js",
     "sort": "./.sort-package.js",
     "rmc": "./.remove-comments.js",
     "adds": "./.add-scripts.js",

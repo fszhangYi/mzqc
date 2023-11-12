@@ -11,7 +11,3 @@ fs.writeFileSync('.editorconfig', editorConfig);
 // release-it
 const release = fs.readFileSync(path.join(__dirname, './template/release-it'));
 fs.writeFileSync('.release-it.json', release);
-
-// npmrc
-const npmrc = fs.readFileSync(path.join(__dirname, './template/npmrc'));
-fs.writeFileSync('.npmrc', npmrc);
