@@ -9,12 +9,15 @@
   "license": "MIT",
   "author": "muzhongqing",
   "bin": {
-    "gc": "./.editorconfig-generator.js",
+    "gce": "./.editorconfig-generator.js",
+    "gcg": "./.gitignore-generator.js",
+    "gcp": "./.prettier-generator.js",
     "sort": "./.sort-package.js",
     "rmc": "./.remove-comments.js",
     "adds": "./.add-scripts.js",
     "ts": "./.add-tsconfig.js",
-    "serve": "./.add-serve.js"
+    "serve": "./.add-serve.js",
+    "umis": "./.add-umi-serve.js"
   },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
