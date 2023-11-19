@@ -19,4 +19,8 @@
 ## 7. 增加常见的scripts命令
 `npx -p mzqc adds`
 ## 8. 删除某一个文件中的注释
-`npx -p mzqc rmc 'path'`
+`npx -p mzqc rmc path1 path2 path3`
+## 9. 删除某一个文件中的condole
+`npx -p mzqc rmlg path1 path2 path3`
+## 10. 格式化文件
+`npx -p mzqc fmt path1 path2 path3`
