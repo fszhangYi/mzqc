@@ -1,4 +1,17 @@
 #!/usr/bin/env node
+const path = require('path');
+const shelljs = require('shelljs');
+const chalk = require('chalk');
 
-console.log('process.argv: ', process.argv);
-console.log('process.argv: ', process.cwd());
+const _tmp = process.argv.slice(2);
+
+try {
+    _tmp.forEach(
+        tmp => {
+            const abs = path.resolve(process.cwd(), tmp);
+            shelljs.exec(`sed -i 's@^\/\/.*$@@g' ${abs}`);
+        }
+    )
+} catch (e) {
+    console.log(chalk.grey('remove comments failed!'));
+}
