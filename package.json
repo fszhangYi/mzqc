@@ -16,6 +16,7 @@
     "gcm": "./.mock-generator.js",
     "sort": "./.sort-package.js",
     "rmc": "./.remove-comments.js",
+    "fmt": "./.format-code.js",
     "rmlg": "./.remove-console.js",
     "adds": "./.add-scripts.js",
     "ts": "./.add-tsconfig.js",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "chalk": "1",
+    "prettier": "^3.1.0",
     "release-it": "^16.2.1",
     "shelljs": "^0.8.5"
   }
