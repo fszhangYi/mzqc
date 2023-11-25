@@ -1,26 +1,40 @@
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    // 设置响应头
-    res.setHeader('Content-Type', 'application/json');
+    console.log('req.url: ', req.url);
+    console.log('req.method: ', req.method);
+    if (req.url === '/re_api') {
+        if (req.method === 'OPTIONS') {
+            // 处理预检请求
+            res.setHeader('Access-Control-Allow-Origin', '*');
+            res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+            res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+            res.setHeader('Access-Control-Max-Age', '86400');
+            res.end();
+            return;
+        }
+        else if (req.method === 'POST') {
+            let body = '';
 
-    // 根据请求路径进行判断
-    if (req.url === '/api/user' && req.method === 'GET') {
-        // 返回数据为 "hello"
-        const data = {
-            message: 'hello'
-        };
+            req.on('data', chunk => {
+                body += chunk;
+            });
 
-        // 将数据转换为JSON字符串并发送给客户端
-        res.end(JSON.stringify(data));
-    } else {
-        // 如果请求路径不匹配，返回404 Not Found
-        res.statusCode = 404;
-        res.end();
+            req.on('end', () => {
+                console.log('请求体:', body);
+                res.setHeader('Access-Control-Allow-Origin', '*');
+                res.setHeader('Content-Type', 'text/plain; charset=utf-8'); // 添加字符编码
+                res.end('提交成功');
+            });
+            return;
+        }
     }
+
+    // 没有匹配的路径，返回 404
+    res.statusCode = 404;
+    res.end();
 });
 
-// 监听在端口3000
-server.listen(3000, () => {
-    console.log('Server is running on port 3000');
+server.listen(9000, () => {
+    console.log('后端服务已启动，监听端口 9000');
 });
