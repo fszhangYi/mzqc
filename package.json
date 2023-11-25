@@ -22,7 +22,8 @@
     "ts": "./.add-tsconfig.js",
     "serve": "./.add-serve.js",
     "umis": "./.add-umi-serve.js",
-    "rmo": "./.remove-others.js"
+    "rmo": "./.remove-others.js",
+    "addn": "./.add-nginx.js"
   },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
