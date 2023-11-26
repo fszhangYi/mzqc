@@ -23,7 +23,8 @@
     "serve": "./.add-serve.js",
     "umis": "./.add-umi-serve.js",
     "rmo": "./.remove-others.js",
-    "addn": "./.add-nginx.js"
+    "addn": "./.add-nginx.js",
+    "addsql": "./.add-sqlite3.js"
   },
   "scripts": {
     "gc": "node ./.editorconfig-generator.js",
