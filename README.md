@@ -20,7 +20,17 @@
 `npx -p mzqc adds`
 ## 8. 删除某一个文件中的注释
 `npx -p mzqc rmc path1 path2 path3`
-## 9. 删除某一个文件中的condole
+## 9. 删除某一个文件中的console
 `npx -p mzqc rmlg path1 path2 path3`
 ## 10. 格式化文件
 `npx -p mzqc fmt path1 path2 path3`
+## 11. 增加一个后端服务器
+`npx -p mzqc serve`
+## 12. 增加一个umi服务器
+`npx -p mzqc umis`
+## 13. 去除CRA项目中多余的文件
+`npx -p mzqc rmo`
+## 14. 生成一个nginx的基础配置文件
+`npx -p mzqc addn`
+## 13. 生成一个sqlite3的基础配置文件
+`npx -p mzqc addsql`
